@@ -1,93 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Calculator</title>
+        <title>Yay Calculator</title>
         <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <link type="text/css" rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
-        <div class="container header_title">
-            <div class="row">
-                <div class="col-xs-12 col-md-12">
-                    <h1>Calculator Yay</h1>
-                </div>
+        <div class="row header_title">
+            <div class="col-xs-12 col-md-6">
+                <h1>Yay Calculator</h1>
             </div>
         </div>
-
-        <div class="container calculator_body">
-            <div class="row">
-                <div class="col-xs-12 col-md-offset-1 col-md-10 calculator_screen">
-                    <h1>Do Math Here</h1>
+        <div id="calc_body" class="col-xs-12 col-md-6">
+            <div class="btn_row">
+                <div class="screen col-xs-12 col-md-6">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-2 col-md-offset-1 col-md-3 clear_wild_buttons">
-                    <h1>C</h1>
-                </div>
-                <div class="col-xs-2 col-md-3 clear_wild_buttons">
-                    <h1>CE</h1>
-                </div>
-                <div class="col-xs-2 col-md-3 clear_wild_buttons">
-                    <h1>&infin;</h1>
-                </div>
+            <div class="btn_row btn_C_CE">
+                <button class="btn btn-danger col-xs-4 col-md-6 clear">C</button>
+                <button class="btn btn-danger col-xs-4 col-md-6 clear">CE</button>
             </div>
-            <div class="row">
-                <div class="col-xs-1 col-md-offset-2 col-md-2 buttons_7_8_9_divide">
-                    <h1>7</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_7_8_9_divide">
-                    <h1>8</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_7_8_9_divide">
-                    <h1>9</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_7_8_9_divide">
-                    <h1>&divide;</h1>
-                </div>
+            <div class="btn_row btn_number_operand">
+                <button class="btn btn-warning col-xs-3 col-md-3 number">7</button>
+                <button class="btn btn-warning col-xs-3 col-md-3 number">8</button>
+                <button class="btn btn-warning col-xs-3 col-md-3 number">9</button>
+                <button class="btn btn-warning col-xs-2 col-md-2 operator">/</button>
             </div>
-            <div class="row">
-                <div class="col-xs-1 col-md-offset-2 col-md-2 buttons_4_5_6_multiply">
-                    <h1>4</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_4_5_6_multiply">
-                    <h1>5</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_4_5_6_multiply">
-                    <h1>6</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_4_5_6_multiply">
-                    <h1>X</h1>
-                </div>
+            <div class="btn_row btn_number_operand">
+                <button class="btn btn-info col-xs-3 col-md-3 number">4</button>
+                <button class="btn btn-info col-xs-3 col-md-3 number">5</button>
+                <button class="btn btn-info col-xs-3 col-md-3 number">6</button>
+                <button class="btn btn-info col-xs-2 col-md-2 operator">*</button>
             </div>
-            <div class="row">
-                <div class="col-xs-1 col-md-offset-2 col-md-2 buttons_1_2_3_minus">
-                    <h1>1</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_1_2_3_minus">
-                    <h1>2</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_1_2_3_minus">
-                    <h1>3</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_1_2_3_minus">
-                    <h1>-</h1>
-                </div>
+            <div class="btn_row btn_number_operand">
+                <button class="btn btn-success col-xs-3 col-md-3 number">1</button>
+                <button class="btn btn-success col-xs-3 col-md-3 number">2</button>
+                <button class="btn btn-success col-xs-3 col-md-3 number">3</button>
+                <button class="btn btn-success col-xs-2 col-md-2 operator">-</button>
             </div>
-            <div class="row">
-                <div class="col-xs-1 col-md-offset-2 col-md-2 buttons_0_period_equal_plus">
-                    <h1>0</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_0_period_equal_plus">
-                    <h1>.</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_0_period_equal_plus">
-                    <h1>=</h1>
-                </div>
-                <div class="col-xs-1 col-md-2 buttons_0_period_equal_plus">
-                    <h1>+</h1>
-                </div>
+            <div class="btn_row btn_number_operand">
+                <button class="btn btn-primary col-xs-3 col-md-3 number">0</button>
+                <button class="btn btn-primary col-xs-3 col-md-3 decimal">.</button>
+                <button class="btn btn-primary col-xs-3 col-md-3 equalSign">=</button>
+                <button class="btn btn-primary col-xs-2 col-md-2 operator">+</button>
             </div>
         </div>
     </body>
