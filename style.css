@@ -6,6 +6,8 @@
 
 body {
     font-size: 0;
+    background: url("images/colored_pencils_3.png") no-repeat;
+    background-size: 100%;
 }
 
 body > * {
@@ -27,7 +29,7 @@ body > * {
     font-size: 6vmin;
 }
 
-.btn, h1 {
+.btn {
     font-size: 5vmin;
 }
 
@@ -45,7 +47,9 @@ body > * {
 }
 
 h1 {
-    color: rgba(255, 20, 147, 0.8);
+    /*color: rgba(255, 20, 147, 0.8);*/
+    color: #FFFFFF;
     text-align: center;
     text-transform: uppercase;
+    font-size: 6vw;
 }
