@@ -27,6 +27,7 @@ body > * {
     margin: 1vmin 0;
     width: 95%;
     font-size: 6vmin;
+    overflow: auto;
 }
 
 .btn {
