@@ -6,7 +6,7 @@
 
 body {
     font-size: 0;
-    background: url("images/colored_pencils_3.png") no-repeat;
+    background: url("images/colored_pencils_3.png") no-repeat #136af7;
     background-size: cover;
 }
 
@@ -51,5 +51,5 @@ h1 {
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
-    font-size: 6vw;
+    font-size: 7vw;
 }
