@@ -4,21 +4,14 @@
     font-family: "PT Serif", sans-serif;
 }
 
-/*body {*/
-    /*font-size: 0;*/
-    /*background: url("images/colored_pencils_3.png") no-repeat #136af7;*/
-    /*background-size: cover;*/
-/*}*/
-
 body {
     font-size: 0;
     background: url("images/colored_pencils_3.png"), url("images/math_rainbow_cloud_group.png");
     background-size: cover, 100%;
     background-repeat: no-repeat, repeat;
-    background-position: center center, center center;
+    background-position: center center;
     background-color: #136af7;
 }
-
 
 body > * {
     font-size: 1rem;
