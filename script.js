@@ -21,10 +21,31 @@ function addNumber(number) {
         //starts over valueArray with the number param
         valueArray[0] = number;
     }
+    else if (valueArray[0] === '0') {
+        valueArray[0] = number;
+    }
+    else if (valueArray[2] === '0') {
+        valueArray[2] = number;
+    }
     else if (operatorLastClicked) {
         //starts the next item in array with number param
         valueArray[++arrayPosition] = number;
     }
+    // else if (number === '0') {
+    //
+    // }
+    // else if (valueArray[arrayPosition][0] === '0') {
+    //     return;
+    // }
+    // else if (valueArray[0] === '0' || (operatorLastClicked && valueArray[0] === '0')) {
+    //     valueArray[0] = number;
+    // }
+    // else if (valueArray[arrayPosition][0] === '0') {
+    //     valueArray[arrayPosition][0] = number;
+    // }
+    // else if (last_value === "0" || last_value === "-0" ) { //if the previous input was "0" or "-0", replace it with the new input
+    //     last_value = clicked_value;
+    // }
     else {
         //adds the number param to the item at current array index
         valueArray[arrayPosition] += number;
