@@ -22,30 +22,17 @@ function addNumber(number) {
         valueArray[0] = number;
     }
     else if (valueArray[0] === '0') {
+        //prevents a number starting with multiple 0's from displaying
         valueArray[0] = number;
     }
     else if (valueArray[2] === '0') {
+        //prevents a number starting with multiple 0's from displaying
         valueArray[2] = number;
     }
     else if (operatorLastClicked) {
         //starts the next item in array with number param
         valueArray[++arrayPosition] = number;
     }
-    // else if (number === '0') {
-    //
-    // }
-    // else if (valueArray[arrayPosition][0] === '0') {
-    //     return;
-    // }
-    // else if (valueArray[0] === '0' || (operatorLastClicked && valueArray[0] === '0')) {
-    //     valueArray[0] = number;
-    // }
-    // else if (valueArray[arrayPosition][0] === '0') {
-    //     valueArray[arrayPosition][0] = number;
-    // }
-    // else if (last_value === "0" || last_value === "-0" ) { //if the previous input was "0" or "-0", replace it with the new input
-    //     last_value = clicked_value;
-    // }
     else {
         //adds the number param to the item at current array index
         valueArray[arrayPosition] += number;
@@ -110,7 +97,7 @@ function buttonClicked(buttonClickEvent) {
         addDecimal(value);
     //if one of the clear buttons is clicked
     } else if ($(buttonClickEvent.target).hasClass('clear')) {
-        if (value === 'C') {
+        if (value === 'DEL') {
             //in the string, start at index zero and take out the last index in the string
             valueArray[arrayPosition] = valueArray[arrayPosition].substr(0, valueArray[arrayPosition].length-1);
             //if first item in array, reset noNumbers
@@ -119,7 +106,18 @@ function buttonClicked(buttonClickEvent) {
             }
             displayValues(valueArray[arrayPosition]);
         }
-        else if (value === 'CE') {
+        if (value === 'CE') {
+            console.log('array position on clear: ' + arrayPosition);
+            //make item at current array index an empty string
+            valueArray[arrayPosition] = '';
+            //if first item in array, reset noNumbers
+            if (arrayPosition == 0) {
+                noNumbers = true;
+            }
+            console.log('input array on clear: ' + valueArray);
+            displayValues(valueArray[arrayPosition]);
+        }
+        else if (value === 'C') {
             //reset valueArray, arrayPosition, display, and noNumbers
             valueArray = [''];
             arrayPosition = 0;
