@@ -21,6 +21,14 @@ function addNumber(number) {
         //starts over valueArray with the number param
         valueArray[0] = number;
     }
+    else if (valueArray[0] === '0') {
+        //prevents a number starting with multiple 0's from displaying
+        valueArray[0] = number;
+    }
+    else if (valueArray[2] === '0') {
+        //prevents a number starting with multiple 0's from displaying
+        valueArray[2] = number;
+    }
     else if (operatorLastClicked) {
         //starts the next item in array with number param
         valueArray[++arrayPosition] = number;
@@ -89,7 +97,7 @@ function buttonClicked(buttonClickEvent) {
         addDecimal(value);
     //if one of the clear buttons is clicked
     } else if ($(buttonClickEvent.target).hasClass('clear')) {
-        if (value === 'C') {
+        if (value === 'DEL') {
             //in the string, start at index zero and take out the last index in the string
             valueArray[arrayPosition] = valueArray[arrayPosition].substr(0, valueArray[arrayPosition].length-1);
             //if first item in array, reset noNumbers
@@ -98,7 +106,16 @@ function buttonClicked(buttonClickEvent) {
             }
             displayValues(valueArray[arrayPosition]);
         }
-        else if (value === 'CE') {
+        if (value === 'CE') {
+            //make item at current array index an empty string
+            valueArray[arrayPosition] = '';
+            //if first item in array, reset noNumbers
+            if (arrayPosition == 0) {
+                noNumbers = true;
+            }
+            displayValues(valueArray[arrayPosition]);
+        }
+        else if (value === 'C') {
             //reset valueArray, arrayPosition, display, and noNumbers
             valueArray = [''];
             arrayPosition = 0;
