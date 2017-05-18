@@ -107,14 +107,12 @@ function buttonClicked(buttonClickEvent) {
             displayValues(valueArray[arrayPosition]);
         }
         if (value === 'CE') {
-            console.log('array position on clear: ' + arrayPosition);
             //make item at current array index an empty string
             valueArray[arrayPosition] = '';
             //if first item in array, reset noNumbers
             if (arrayPosition == 0) {
                 noNumbers = true;
             }
-            console.log('input array on clear: ' + valueArray);
             displayValues(valueArray[arrayPosition]);
         }
         else if (value === 'C') {
