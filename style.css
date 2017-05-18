@@ -6,11 +6,8 @@
 
 body {
     font-size: 0;
-    background: url("images/colored_pencils_3.png"), url("images/math_rainbow_cloud_group.png");
-    background-size: cover, 100%;
-    background-repeat: no-repeat, repeat;
-    background-position: center center;
-    background-color: #136af7;
+    background: url("images/math_rainbow_cloud_group.png") repeat center #136af7;
+    background-size: 100%;
 }
 
 body > * {
