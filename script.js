@@ -100,10 +100,6 @@ function buttonClicked(buttonClickEvent) {
         if (value === 'DEL') {
             //in the string, start at index zero and take out the last index in the string
             valueArray[arrayPosition] = valueArray[arrayPosition].substr(0, valueArray[arrayPosition].length-1);
-            //if first item in array, reset noNumbers
-            if (arrayPosition == 0) {
-                noNumbers = true;
-            }
             displayValues(valueArray[arrayPosition]);
         }
         if (value === 'CE') {
