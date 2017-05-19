@@ -21,13 +21,13 @@ function addNumber(number) {
         //starts over valueArray with the number param
         valueArray[0] = number;
     }
-    else if (valueArray[0] === '0') {
-        //prevents a number starting with multiple 0's from displaying
-        valueArray[0] = number;
-    }
     else if (valueArray[2] === '0') {
         //prevents a number starting with multiple 0's from displaying
         valueArray[2] = number;
+    }
+    else if (valueArray[arrayPosition][0] === '0') {
+        //prevents a number starting with multiple 0's from displaying
+        valueArray[0] = number;
     }
     else if (operatorLastClicked) {
         //starts the next item in array with number param
