@@ -9,7 +9,7 @@ body {
     background: url("images/colored_pencils_3.png"), url("images/math_rainbow_cloud_group.png");
     background-size: cover, 100%;
     background-repeat: no-repeat, repeat;
-    background-position: center center;
+    background-position: center;
     background-color: #136af7;
 }
 
